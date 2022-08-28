@@ -24,16 +24,14 @@ function App({ mode }) {
         const width = canvas.clientWidth;
         const height = canvas.clientHeight;
         if (canvas.width !== width || canvas.height !== height) {
-          renderer.setSize(width, height);
+          renderer.setSize(width, height, false);
         }
       };
 
       const tick = () => {
         if (!renderer) return;
         updateSize();
-        // if (window.scrollY < 20) {
-        //
-        // }
+
         if (canvas) canvas.style.transform = `translateY(${window.scrollY}px)`;
         renderer.setClearColor(refBack.current);
         renderer.setScissorTest(false);
