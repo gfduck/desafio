@@ -210,11 +210,8 @@ const Content = ({ sendSceneMain, bread, inside, color, mode, sendTab }) => {
             xs={12}
             className="mx-auto d-block"
             style={{
-              // marginTop: "200px",
-              // background: "black",
               position: "relative",
               zIndex: "1",
-              // padding: "20px",
               padding: "0px",
               borderRadius: "8px",
               border:
@@ -248,7 +245,6 @@ const Content = ({ sendSceneMain, bread, inside, color, mode, sendTab }) => {
                   style={{ height: "73px" }}
                 >
                   <div
-                    // className="d-flex  justify-content-center mx-auto d-block contenedor-menu"
                     className={
                       mode === "light"
                         ? "d-flex  justify-content-center mx-auto d-block contenedor-menu contenedor-white"

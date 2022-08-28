@@ -16,18 +16,11 @@ const Canvas = ({ sendRenderer }) => {
       premultipliedAlpha: false,
       powerPreference: "high-performance",
     });
-    // renderer.setScissorTest(false);
 
-    // renderer.clear();
-    // renderer.setScissorTest(true);
-    // renderer.setClearColor(0xffffff);
     renderer.setScissorTest(false);
     renderer.clear();
 
-    // renderer.setClearColor(0xe0e0e0);
     renderer.setScissorTest(true);
-    renderer.setClearColor(0xffffff, 1);
-    // renderer.setSize(canvas.clientWidth, canvas.clientHeight);
     renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
     renderer.physicallyCorrectLights = true;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;

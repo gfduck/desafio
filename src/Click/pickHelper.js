@@ -143,7 +143,6 @@ export class PickHelper {
               break;
           }
         }
-        console.log("mouse enter");
         this.div.style.cursor = "pointer";
       }
       this.currentIntersect = intersectedObjects[0];

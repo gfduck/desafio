@@ -63,7 +63,6 @@ const Header = ({ dispatch, mode, div }) => {
               width: "60px",
               height: "40px",
               position: "relative",
-              // marginTop: "10px",
             }}
             className="button-mode"
             ref={refDivButton}
