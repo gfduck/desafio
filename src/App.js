@@ -15,7 +15,7 @@ function App({ mode }) {
   let canvas = null;
   const scenes = [];
   let pickHelperSliced = null;
-  let mouseSliced = null;
+  let mouse = null;
   let changeTab = null;
   useEffect(() => {
     (() => {
@@ -66,7 +66,7 @@ function App({ mode }) {
           scene.userData.camera.updateProjectionMatrix();
 
           if (pickHelperSliced) {
-            pickHelperSliced.pick(mouseSliced, scene, scene.userData.camera);
+            pickHelperSliced.pick(mouse, scene, scene.userData.camera);
           }
           renderer.render(scene, camera);
         });
@@ -119,7 +119,7 @@ function App({ mode }) {
   const sendSceneMain = (value) => {
     scenes.push(value);
     refSceneMain.current = value;
-    mouseSliced = generateMouse(value);
+    mouse = generateMouse(value);
     pickHelperSliced = new PickHelper(change, refDivScene.current);
     pickHelperSliced.click();
   };
