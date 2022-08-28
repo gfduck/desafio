@@ -1,13 +1,15 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Canvas from "./components/Canvas";
 import Content from "./components/Content";
 import { connect } from "react-redux";
 import { PickHelper } from "./Click/pickHelper";
 import { generateMouse } from "./functions/generateMouse";
 import * as THREE from "three";
+import { Spinner } from "react-bootstrap";
 function App({ mode }) {
+  const [loading, setLoading] = useState(true);
   const refBack = useRef("");
   const refSceneMain = useRef(null);
   const refDivScene = useRef(null);
@@ -122,10 +124,29 @@ function App({ mode }) {
     mouse = generateMouse(value);
     pickHelperSliced = new PickHelper(change, refDivScene.current);
     pickHelperSliced.click();
+
+    setLoading(false);
   };
 
   return (
     <>
+      {loading && (
+        <div
+          style={{
+            position: "fixed",
+            width: "100%",
+            height: "100vh",
+            zIndex: "5",
+            background: "#FFFFFF",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Spinner animation="border" role="status"></Spinner>
+        </div>
+      )}
+
       <Canvas sendRenderer={sendRenderer} />
       <Content sendSceneMain={sendSceneMain} sendTab={sendTab}></Content>
     </>

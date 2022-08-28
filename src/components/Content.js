@@ -34,6 +34,7 @@ const Content = ({ sendSceneMain, bread, inside, color, mode, sendTab }) => {
       if (enviado) return;
       enviado = true;
       const [sceneMain, divSceneMain] = generateScene(mode);
+
       refDiv.current.appendChild(divSceneMain);
       refDiv.current.style.cursor = "grab";
       const dracoLoader = new DRACOLoader();
@@ -141,6 +142,7 @@ const Content = ({ sendSceneMain, bread, inside, color, mode, sendTab }) => {
       const objectFlag = flagObject.children[indexFlag];
 
       setColorFlag(objectFlag);
+
       /**
        *
        * Send Scene
