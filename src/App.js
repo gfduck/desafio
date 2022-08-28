@@ -24,13 +24,16 @@ function App({ mode }) {
         const width = canvas.clientWidth;
         const height = canvas.clientHeight;
         if (canvas.width !== width || canvas.height !== height) {
-          renderer.setSize(width, height, false);
+          renderer.setSize(width, height);
         }
       };
 
       const tick = () => {
         if (!renderer) return;
         updateSize();
+        // if (window.scrollY < 20) {
+        //
+        // }
         if (canvas) canvas.style.transform = `translateY(${window.scrollY}px)`;
         renderer.setClearColor(refBack.current);
         renderer.setScissorTest(false);
@@ -74,6 +77,18 @@ function App({ mode }) {
       };
       tick();
     })();
+
+    const funcionResize = (e) => {
+      if (window.matchMedia("(pointer: coarse)").matches) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+    };
+    window.addEventListener("resize", funcionResize);
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      document.body.style.overflow = "hidden";
+    }
   }, []);
 
   useEffect(() => {
@@ -94,6 +109,15 @@ function App({ mode }) {
   const sendRenderer = (value, cv) => {
     renderer = value;
     canvas = cv;
+    const functionScroll = (e) => {
+      if (window.matchMedia("(pointer: coarse)").matches) {
+        // touchscreen
+        e.preventDefault();
+        e.stopPropagation();
+        alert("canvas");
+      }
+    };
+    canvas.addEventListener("scroll", functionScroll);
   };
 
   const sendTab = (value, valueDiv) => {
