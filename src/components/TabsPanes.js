@@ -23,7 +23,7 @@ const TabsPanes = ({ dispatch, bread, mode }) => {
           <img
             src={sliced}
             className="mx-auto d-block img-fluid pointer item radius-8 padding-20"
-            onClick={() => change_bread(dispatch, "sliced")}
+            onClick={() => dispatch(change_bread("sliced"))}
             style={{
               border:
                 mode === "light"
@@ -40,7 +40,7 @@ const TabsPanes = ({ dispatch, bread, mode }) => {
           <img
             src={buns}
             className="mx-auto d-block img-fluid pointer radius-8  padding-20"
-            onClick={() => change_bread(dispatch, "buns")}
+            onClick={() => dispatch(change_bread("buns"))}
             style={{
               border:
                 mode === "light"
@@ -57,7 +57,7 @@ const TabsPanes = ({ dispatch, bread, mode }) => {
           <img
             src={baguette}
             className="mx-auto d-block img-fluid pointer radius-8  padding-20"
-            onClick={() => change_bread(dispatch, "baguette")}
+            onClick={() => dispatch(change_bread("baguette"))}
             style={{
               border:
                 mode === "light"

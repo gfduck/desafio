@@ -24,7 +24,7 @@ const TabsColores = ({ dispatch, color, mode }) => {
               ? `${ANCHO_BORDE_ITEM} solid ${NARANJA}`
               : `${ANCHO_BORDE_ITEM} solid #6B6B6B`,
         }}
-        onClick={() => change_flag(dispatch, "#e36666")}
+        onClick={() => dispatch(change_flag("#e36666"))}
       ></div>
       <div
         className="div-color pointer"
@@ -40,7 +40,7 @@ const TabsColores = ({ dispatch, color, mode }) => {
               ? `${ANCHO_BORDE_ITEM} solid ${NARANJA}`
               : `${ANCHO_BORDE_ITEM} solid #6B6B6B`,
         }}
-        onClick={() => change_flag(dispatch, "#f1c76d")}
+        onClick={() => dispatch(change_flag("#f1c76d"))}
       ></div>
       <div
         className="div-color pointer"
@@ -56,7 +56,7 @@ const TabsColores = ({ dispatch, color, mode }) => {
               ? `${ANCHO_BORDE_ITEM} solid ${NARANJA}`
               : `${ANCHO_BORDE_ITEM} solid #6B6B6B`,
         }}
-        onClick={() => change_flag(dispatch, "#9bbb79")}
+        onClick={() => dispatch(change_flag("#9bbb79"))}
       ></div>
       <div
         className="div-color pointer"
@@ -73,7 +73,7 @@ const TabsColores = ({ dispatch, color, mode }) => {
               ? `${ANCHO_BORDE_ITEM} solid ${NARANJA}`
               : `${ANCHO_BORDE_ITEM} solid #6B6B6B`,
         }}
-        onClick={() => change_flag(dispatch, "#5f8e8d")}
+        onClick={() => dispatch(change_flag("#5f8e8d"))}
       ></div>
       <div
         className="div-color pointer"
@@ -88,7 +88,7 @@ const TabsColores = ({ dispatch, color, mode }) => {
               ? `${ANCHO_BORDE_ITEM} solid ${NARANJA}`
               : `${ANCHO_BORDE_ITEM} solid #6B6B6B`,
         }}
-        onClick={() => change_flag(dispatch, "#427d9d")}
+        onClick={() => dispatch(change_flag("#427d9d"))}
       ></div>
     </div>
   );

@@ -1,6 +1,6 @@
 export const CHANGE_INSIDE = "CHANGE_INSIDE";
 
-export const change_inside = (dispatch, inside) => {
+export const change_inside = (inside) => {
   let json = {};
   if (localStorage.getItem("sandwich")) {
     json = JSON.parse(localStorage.getItem("sandwich"));
@@ -11,10 +11,11 @@ export const change_inside = (dispatch, inside) => {
     };
   }
   localStorage.setItem("sandwich", JSON.stringify(json));
-  dispatch({
+
+  return {
     type: CHANGE_INSIDE,
     payload: {
       inside,
     },
-  });
+  };
 };

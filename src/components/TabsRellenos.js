@@ -24,7 +24,7 @@ const TabsRellenos = ({ dispatch, inside, mode }) => {
           <img
             src={beef}
             className="mx-auto d-block img-fluid pointer radius-8  padding-20"
-            onClick={() => change_inside(dispatch, "beef")}
+            onClick={() => dispatch(change_inside("beef"))}
             style={{
               border:
                 mode === "light"
@@ -41,7 +41,7 @@ const TabsRellenos = ({ dispatch, inside, mode }) => {
           <img
             src={salmon}
             className="mx-auto d-block img-fluid pointer radius-8  padding-20"
-            onClick={() => change_inside(dispatch, "salmon")}
+            onClick={() => dispatch(change_inside("salmon"))}
             style={{
               border:
                 mode === "light"
@@ -58,7 +58,7 @@ const TabsRellenos = ({ dispatch, inside, mode }) => {
           <img
             src={ham}
             className="mx-auto d-block img-fluid pointer radius-8  padding-20"
-            onClick={() => change_inside(dispatch, "hamburger")}
+            onClick={() => dispatch(change_inside("hamburger"))}
             style={{
               border:
                 mode === "light"

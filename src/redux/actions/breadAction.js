@@ -1,6 +1,6 @@
 export const CHANGE_BREAD = "CHANGE_BREAD";
 
-export const change_bread = (dispatch, bread) => {
+export const change_bread = (bread) => {
   let json = {};
 
   if (localStorage.getItem("sandwich")) {
@@ -12,11 +12,10 @@ export const change_bread = (dispatch, bread) => {
     };
   }
   localStorage.setItem("sandwich", JSON.stringify(json));
-
-  dispatch({
+  return {
     type: CHANGE_BREAD,
     payload: {
       bread,
     },
-  });
+  };
 };
