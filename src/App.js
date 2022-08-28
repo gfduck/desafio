@@ -107,15 +107,6 @@ function App({ mode }) {
   const sendRenderer = (value, cv) => {
     renderer = value;
     canvas = cv;
-    const functionScroll = (e) => {
-      if (window.matchMedia("(pointer: coarse)").matches) {
-        // touchscreen
-        e.preventDefault();
-        e.stopPropagation();
-        alert("canvas");
-      }
-    };
-    canvas.addEventListener("scroll", functionScroll);
   };
 
   const sendTab = (value, valueDiv) => {
