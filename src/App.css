@@ -225,6 +225,10 @@ background:#292929;
 .texto-menu{
   display:block !important;
 }
+
+.div-content{
+  height:90vh;
+}
 @media (max-width: 767px) {
   .show-desktop{
     display:none !important;
@@ -255,21 +259,27 @@ background:#292929;
 }
 @media (max-height: 750px) {
   .row-items{
-    height: 26vh;
+    height: 22vh;
+  }
+  .div-content{
+    height:86vh;
   }
 }
 @media (max-height: 630px) {
   .row-items{
-    height: 33vh;
+    height: 30vh;
+  }
+  .div-content{
+    height:60vh;
   }
 }
 @media (max-height: 600px) {
   .row-items{
-    height: 35vh;
+    height: 33vh;
   }
 }
 @media (max-height: 450px) {
   .row-items{
-    height: 45vh;
+    height: 42vh;
   }
 }

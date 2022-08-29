@@ -202,8 +202,8 @@ const Content = ({ sendSceneMain, bread, inside, color, mode, sendTab }) => {
       <Header div={div} />
       <Row>
         <div
-          className="d-flex align-items-center"
-          style={{ height: "90vh", width: "100%" }}
+          className="d-flex align-items-center div-content"
+          style={{ width: "100%" }}
         >
           <Col
             md={6}
@@ -216,6 +216,7 @@ const Content = ({ sendSceneMain, bread, inside, color, mode, sendTab }) => {
               zIndex: "1",
               padding: "0px",
               borderRadius: "8px",
+              marginTop: "-60px",
               border:
                 mode === "light" ? "2px solid #C6C6C6" : "2px solid #848484",
             }}
