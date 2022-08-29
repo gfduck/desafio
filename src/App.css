@@ -283,3 +283,34 @@ background:#292929;
     height: 42vh;
   }
 }
+
+@media (max-width: 767px) {
+  .show-desktop{
+    display:none !important;
+  }
+  .show-header{
+    display:none !important;
+  }
+  .button-mode{
+    display:block !important;
+    position:absolute;
+  top:7px;
+  right:0px;
+  z-index:4;
+  margin-top:0px;
+  margin-right:10px;
+  }
+  .img-items{
+    width:20px;
+    margin-right:0px;
+    margin: 0 auto !important;
+  }
+  
+  .texto-menu{
+    display:none !important;
+  }
+  .div-content{
+    height:100vh;
+  }
+
+}
