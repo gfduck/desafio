@@ -3,14 +3,10 @@
     margin: 0;
     padding: 0;
 }
-html, body {
-  margin:0;
-  padding:0;
-  background:#FFFFFF;
-  font-family: 'Inter', sans-serif !important;
-}
+
 body{
-  height:100vh;
+  font-family: 'Inter', sans-serif !important;
+  background:#FFFFFF;
 }
 #canvas
 {
@@ -254,11 +250,7 @@ background:#292929;
   .texto-menu{
     display:none !important;
   }
-  #canvas
-{
 
-overflow: hidden  !important;
-}
 
 }
 @media (max-height: 750px) {
