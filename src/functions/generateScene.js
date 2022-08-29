@@ -27,7 +27,7 @@ export const generateScene = (mode) => {
     scene.userData.camera,
     scene.userData.element
   );
-
+  controls.enablePan = false;
   controls.maxDistance = 4;
   controls.minDistance = 1.7;
   scene.userData.controls = controls;
