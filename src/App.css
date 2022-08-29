@@ -212,7 +212,7 @@ background:#292929;
 
 }
 .show-desktop{
-  display:none !important;
+  display:block !important;
 }
 .show-header{
   display:flex !important;
